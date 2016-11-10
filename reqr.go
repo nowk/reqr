@@ -16,6 +16,9 @@ type Reqr interface {
 	GET(string, ...ReqFunc) Response
 	POST(string, interface{}, ...ReqFunc) Response
 	PUT(string, interface{}, ...ReqFunc) Response
+	DELETE(string, interface{}, ...ReqFunc) Response
+	OPTIONS(string, interface{}, ...ReqFunc) Response
+	HEAD(string, interface{}, ...ReqFunc) Response
 }
 
 // TransformFunc will allow chained transformations of the Request or Response
