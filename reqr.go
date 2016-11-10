@@ -128,3 +128,19 @@ func (r *reqr) POST(path string, b interface{}, opts ...ReqFunc) Response {
 func (r *reqr) PUT(path string, b interface{}, opts ...ReqFunc) Response {
 	return r.Do("PUT", path, b, opts...)
 }
+
+func (r *reqr) PATCH(path string, b interface{}, opts ...ReqFunc) Response {
+	return r.Do("PATCH", path, b, opts...)
+}
+
+func (r *reqr) DELETE(path string, b interface{}, opts ...ReqFunc) Response {
+	return r.Do("DELETE", path, b, opts...)
+}
+
+func (r *reqr) OPTIONS(path string, b interface{}, opts ...ReqFunc) Response {
+	return r.Do("OPTIONS", path, b, opts...)
+}
+
+func (r *reqr) HEAD(path string, b interface{}, opts ...ReqFunc) Response {
+	return r.Do("HEAD", path, b, opts...)
+}
